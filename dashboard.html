@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\css\bootstrap.css" >
+    <link rel="stylesheet" href="./../css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+             .wrapper {
+              display: flex;
+              width: 100%;
+              align-items: stretch;
+          }
+
+                #sidebar {
+          min-width: 250px;
+          max-width: 250px;
+          min-height: 100vh;
+          /* margin: 1px; */
+      }
+
+            #sidebar.active {
+          margin-left: -250px;
+      }
+
+      @media (max-width: 768px) {
+          #sidebar {
+              margin-left: -250px;
+          }
+          #sidebar.active {
+              margin-left: 0;
+          }
+      }
+
+      body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #fff;
+    color: black;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    color: black;
+    padding: 20px;
+    background: #fff;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 0px solid #5d6170;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #5d6170;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #b1b3b9;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background:#5d6170;
+    margin-top: 0px;
+}
+
+@media screen and (min-width:768px){
+
+  img{
+              height:75px;
+              width: 75%;
+          }
+
+          .box
+            {
+                border:solid 1px;
+                width: 100%;
+                height: 20%;
+                padding: 5px;
+                margin: 8px;
+                /* float: left; */
+                text-align: center;
+                line-height: 160%;
+                margin-left: 1px;
+                /* overflow: scroll; */
+                /* border-radius: 10px 10px 0px 0px; */
+            }
+
+            #boxes{
+              border:solid 1px;
+                width: 100%;
+                height: 70%;
+                padding: 5px;
+                margin: 8px;
+                /* float: left; */
+                text-align: center;
+                line-height: 160%;
+                margin-left: 1px;
+            }
+            #boxteam
+            {
+              border:solid 0px;
+                width: 100%;
+                height: 50%;
+                padding: 5px;
+                margin: 8px;
+                /* float: left; */
+                text-align: center;
+                line-height: 160%;
+                margin-left: 1px;
+            }
+            #content{
+              color: black;
+              border: solid 0px;
+              background-image: linear-gradient(-90deg,#a78a69, #a1ad80);  
+            }
+           
+            
+            .dot {
+            height: 56px;
+            width: 56px;
+            background-color: rgb(19, 45, 196);
+            border-radius: 150%;
+            display: inline-block;
+            font-size: 20px;
+            text-align: center;
+            padding: 8px;
+          }
+          .dots{
+            height: 26px;
+            width: 26px;
+            background-color: rgb(25, 199, 9);
+            border-radius: 150%;
+            display: inline-block;
+            font-size: 10px;
+            text-align: center;
+            padding: 8px;
+            position: relative;left: 80px;top: -150px;
+          }
+		  .f-s-15{
+		   font-size:15px;
+		  }
+		  .m-t-25{
+		   margin-top:25px;
+		  }
+		  .m-t-35{
+		   margin-top:35px;
+		  }
+		   .f-r{
+		   float:right;
+		   }
+		   .m-r-10{
+		   margin-right:10px;
+		   }
+		   .f-s-33{
+		   font-size:33px;
+		   }
+		   .m-t--11{
+		   margin-top:-11px;
+		   }
+		   .p-r-30{
+		   padding-right:30px;
+		   }
+		   .p-t-15{
+		   padding-top:15px;
+		   }
+  
+       #srchtxt{
+
+width: 450px;
+margin-left:0px;
+}
+#frmtxt{
+align-items: flex-end
+}
+#ibell{
+font-size: 20px;
+}
+#bdgnum{
+position: relative;left: 3px;top: -20px;
+}
+
+#ipen{
+font-size: 15px;
+}
+#profilehead{
+margin-left: 22px ;margin-top:-100px;
+}
+#hfor{
+font-weight:600
+}
+#maindiv{
+border: solid 0px; 
+}
+#subdiv{
+height: 120px;
+}
+#user{
+font-size :120px;
+}
+#bdgblb{
+position: relative;left: -76px;top: -22px;
+}
+#iblb{
+font-size :50px;
+}
+#dtcmain{
+border: solid 0px; padding: auto;
+}
+#hdtc{
+padding: 15px;
+}
+#rdtc{
+margin-top: 70px;
+}
+#adtc{
+margin-right:auto;
+}
+#idtc{
+font-size :20px; padding: 15px;
+}
+#bxc{
+width:1035px;
+}
+#iuprofile{
+font-size :50px;
+}
+}
+
+
+@media screen and (min-width:992px){
+
+img{
+            height:75px;
+            width: 75%;
+        }
+
+        .box
+          {
+              border:solid 1px;
+              width: 100%;
+              height: 20%;
+              padding: 5px;
+              margin: 8px;
+              /* float: left; */
+              text-align: center;
+              line-height: 160%;
+              margin-left: 1px;
+              /* overflow: scroll; */
+              /* border-radius: 10px 10px 0px 0px; */
+          }
+
+          #boxes{
+            border:solid 1px;
+              width: 100%;
+              height: 70%;
+              padding: 5px;
+              margin: 8px;
+              /* float: left; */
+              text-align: center;
+              line-height: 160%;
+              margin-left: 1px;
+          }
+          #boxteam
+          {
+            border:solid 0px;
+              width: 100%;
+              height: 50%;
+              padding: 5px;
+              margin: 8px;
+              /* float: left; */
+              text-align: center;
+              line-height: 160%;
+              margin-left: 1px;
+          }
+          #content{
+            color: black;
+            border: solid 0px;
+            background-image: linear-gradient(-90deg,#a78a69, #a1ad80);  
+          }
+         
+          
+          .dot {
+          height: 56px;
+          width: 56px;
+          background-color: rgb(19, 45, 196);
+          border-radius: 150%;
+          display: inline-block;
+          font-size: 20px;
+          text-align: center;
+          padding: 8px;
+        }
+        .dots{
+          height: 26px;
+          width: 26px;
+          background-color: rgb(25, 199, 9);
+          border-radius: 150%;
+          display: inline-block;
+          font-size: 10px;
+          text-align: center;
+          padding: 8px;
+          position: relative;left: 80px;top: -150px;
+        }
+    .f-s-15{
+     font-size:15px;
+    }
+    .m-t-25{
+     margin-top:25px;
+    }
+    .m-t-35{
+     margin-top:35px;
+    }
+     .f-r{
+     float:right;
+     }
+     .m-r-10{
+     margin-right:10px;
+     }
+     .f-s-33{
+     font-size:33px;
+     }
+     .m-t--11{
+     margin-top:-11px;
+     }
+     .p-r-30{
+     padding-right:30px;
+     }
+     .p-t-15{
+     padding-top:15px;
+     }
+
+     #srchtxt{
+
+width: 450px;
+margin-left:0px;
+}
+#frmtxt{
+align-items: flex-end
+}
+#ibell{
+font-size: 20px;
+}
+#bdgnum{
+position: relative;left: 3px;top: -20px;
+}
+
+#ipen{
+font-size: 15px;
+}
+#profilehead{
+margin-left: 22px ;margin-top:-100px;
+}
+#hfor{
+font-weight:600
+}
+#maindiv{
+border: solid 0px; 
+}
+#subdiv{
+height: 120px;
+}
+#user{
+font-size :120px;
+}
+#bdgblb{
+position: relative;left: -76px;top: -22px;
+}
+#iblb{
+font-size :50px;
+}
+#dtcmain{
+border: solid 0px; padding: auto;
+}
+#hdtc{
+padding: 15px;
+}
+#rdtc{
+margin-top: 70px;
+}
+#adtc{
+margin-right:auto;
+}
+#idtc{
+font-size :20px; padding: 15px;
+}
+#bxc{
+width:1035px;
+}
+#iuprofile{
+font-size :50px;
+}
+
+}
+
+
+@media screen and (min-width:1200px){
+
+img{
+            height:75px;
+            width: 75%;
+        }
+
+        .box
+          {
+              border:solid 1px;
+              width: 100%;
+              height: 20%;
+              padding: 5px;
+              margin: 8px;
+              /* float: left; */
+              text-align: center;
+              line-height: 160%;
+              margin-left: 1px;
+              /* overflow: scroll; */
+              /* border-radius: 10px 10px 0px 0px; */
+          }
+
+          #boxes{
+            border:solid 1px;
+              width: 100%;
+              height: 70%;
+              padding: 5px;
+              margin: 8px;
+              /* float: left; */
+              text-align: center;
+              line-height: 160%;
+              margin-left: 1px;
+          }
+          #boxteam
+          {
+            border:solid 0px;
+              width: 100%;
+              height: 50%;
+              padding: 5px;
+              margin: 8px;
+              /* float: left; */
+              text-align: center;
+              line-height: 160%;
+              margin-left: 1px;
+          }
+          #content{
+            color: black;
+            border: solid 0px;
+            background-image: linear-gradient(-90deg,#a78a69, #a1ad80);  
+          }
+         
+          
+          .dot {
+          height: 56px;
+          width: 56px;
+          background-color: rgb(19, 45, 196);
+          border-radius: 150%;
+          display: inline-block;
+          font-size: 20px;
+          text-align: center;
+          padding: 8px;
+        }
+        .dots{
+          height: 26px;
+          width: 26px;
+          background-color: rgb(25, 199, 9);
+          border-radius: 150%;
+          display: inline-block;
+          font-size: 10px;
+          text-align: center;
+          padding: 8px;
+          position: relative;left: 80px;top: -150px;
+        }
+    .f-s-15{
+     font-size:15px;
+    }
+    .m-t-25{
+     margin-top:25px;
+    }
+    .m-t-35{
+     margin-top:35px;
+    }
+     .f-r{
+     float:right;
+     }
+     .m-r-10{
+     margin-right:10px;
+     }
+     .f-s-33{
+     font-size:33px;
+     }
+     .m-t--11{
+     margin-top:-11px;
+     }
+     .p-r-30{
+     padding-right:30px;
+     }
+     .p-t-15{
+     padding-top:15px;
+     }
+     #srchtxt{
+
+      width: 450px;
+      margin-left:0px;
+     }
+     #frmtxt{
+      align-items: flex-end
+     }
+     #ibell{
+      font-size: 20px;
+     }
+     #bdgnum{
+      position: relative;left: 3px;top: -20px;
+     }
+
+     #ipen{
+      font-size: 15px;
+     }
+    #profilehead{
+      margin-left: 22px ;margin-top:-100px;
+    }
+    #hfor{
+      font-weight:600
+    }
+    #maindiv{
+      border: solid 0px; 
+    }
+    #subdiv{
+      height: 120px;
+    }
+    #user{
+      font-size :120px;
+    }
+    #bdgblb{
+      position: relative;left: -76px;top: -22px;
+    }
+    #iblb{
+      font-size :50px;
+    }
+    #dtcmain{
+      border: solid 0px; padding: auto;
+    }
+    #hdtc{
+      padding: 15px;
+    }
+    #rdtc{
+      margin-top: 70px;
+    }
+    #adtc{
+      margin-right:auto;
+    }
+    #idtc{
+      font-size :20px; padding: 15px;
+    }
+    #bxc{
+      width:1035px;
+    }
+    #iuprofile{
+      font-size :50px;
+    }
+}
+
+            
+    </style>
+           
+        
+</head>
+<body>
+  
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark" >
+
+  <a class="navbar-brand " href="index.html" style="width:300px;">
+  <img   height="50px" width="100%" src="https://nh1design.com/wp-content/uploads/2018/09/Birlasoft-logo-with-tagline.jpg">
+  </a>
+  <button type="button"  
+  class="navbar-toggler" 
+  data-target="#navs"  
+  data-toggle="collapse">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="input-group  my-lg-2" id="frmtxt">
+    <input class="form-group mr-sm-3 rounded" id="srchtxt"type="search" placeholder="Search" aria-label="Search">
+  </form>
+  <ul class="navbar-nav  my-2 my-lg-0 float-right">
+    <li class="nav-item ml-3"><a class="nav-link" href="#cart">
+      <i class="fas fa-bell text-white" id="ibell" >
+        <sup>
+          
+          <span class="badge badge-pill badge-danger p-1 rounded" id="bdgnum">1</span>
+        </sup>
+      </i>
+    </a></li>
+    <li class="nav-item"><a class="nav-link active border-primary"data-toggle="modal" data-toggle="tooltip" title="Logout Here" href="#login">Logout</a></li> 
+    
+  </ul>
+</nav>
+
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="">
+      <div class="sidebar-header">
+        <div class="col-lg-4 col-sm-6 col-md-3 col-12" > 
+
+          <i class="fas fa-user-circle" id="user">
+            <sup>
+              <span class="dots" ><i class="fas fa-pen" id="ipen" ></i></span>
+
+            </sup>
+          </i>       
+        
+         
+      </div>
+          <div  class="profilehead">
+            <h6 id="hfor">Forrest Wilson</h6>
+            <small>UX Designer</small>
+          </div>
+      </div>
+
+      <ul class="list-unstyled components ">
+          <li class="active">
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">DASHBOARD</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li>
+                      <a href="#">Home 1</a>
+                  </li>
+                  <li>
+                      <a href="#">Home 2</a>
+                  </li>
+                  <li>
+                      <a href="#">Home 3</a>
+                  </li>
+              </ul>
+          </li>
+          
+          <li>
+              <a href="#">MFSI</a>
+          </li>
+
+          <hr>
+          <li>
+              <a href="#">BFSI</a>
+          </li>
+          <hr>
+          <li>
+              <a href="#">TEAM</a>
+          </li>
+      </ul>
+  </nav>
+  <div id="content" class="container-fluid">
+        <div class="row ">
+          
+          <div class="col-lg-10 col-sm-6 col-md-3 col-12"  id="part2">
+            <div class="container">
+              <h1 class="m-t-25">DashBoard</h1>
+              <div class="row m-t-35">
+
+                <div class="col-lg-6" id="maindiv" >
+                  <div class="card" id="subdiv" >
+                    <div class="row align-items-center">
+                      <div class="col">
+                        
+                      </div>
+                      <sup><small class="badge badge-danger" id="bdgblb"
+                        ><i class="far fa-lightbulb" id="iblb">
+                        </i></small></sup>
+                      <div class="col m-t-25">
+                        <h5>MFSI</h5>
+                      </div>
+                      <div class="col m-t-25">
+                        <h6>Total Projects</h6>
+                        <big class="f-r m-r-10 f-s-33 m-t--11">34</big>
+                      </div>
+                     </div>
+                  </div>
+
+                </div>
+                
+                <div class="col-lg-6" id="maindiv">
+
+                  <div class="card"  id="subdiv">
+                    <div class="row align-items-center">
+                      <div class="col">
+                        
+                      </div>
+                     <sup><small class="badge badge-primary" 
+                      id="bdgblb"><i class="fas fa-signal" id="iblb">
+                      </i></small></sup>
+                      <div class="col m-t-25">
+                        <h5>BFSI</h5>
+                      </div>
+                      
+                      <div class="col m-t-25" style="margin-left:-12px;">
+                        <h6>Total Projects</h6>
+                        <big class="f-r m-r-10 f-s-33 m-t--11">34</big>
+                        
+                      </div>
+                     </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <br>
+              <br>
+              <h2>Latest Projects</h2>
+
+ 
+              <div class="row">
+
+                
+                 
+                
+                <div class="col-lg-4 " id="dtcmain">
+                  <div class="card">
+                    <div class="row">
+                      <div class="col-md-10">
+					            <h6 id="hdtc" >DTCC - Code Componets<br>BFSI/Banking</h6> 
+                      </div>
+                      <div class="col-md-9 ms-auto"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3 ms-md-auto">  </div>
+                      <div class="col-md-3 ms-md-auto">   </div>
+                    </div>
+                    <div class="row" id="rdtc" >
+                      <div class="col-auto me-auto"  id="adtc"><i class="fas fa-user-circle" id="idtc" >
+                      </i> </div>
+                      <div class="col-auto p-r-30 p-t-15"><i  class="far fa-eye"></i>2356</div>
+                    </div>
+                  </div>
+                 </div>
+
+                 <div class="col-lg-4 "style="border: solid 0px;">
+                  <div class="card">
+                    <div class="row">
+                      <div class="col-md-10"><h6 id="hdtc">Indus Tower - Employee<br>MFSI/Telecom</h6></div>
+                      <div class="col-md-9 ms-auto"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9 ms-md-auto">  </div>
+                      <div class="col-md-9 ms-md-auto">   </div>
+                    </div>
+                    <div class="row" id="rdtc">
+                      <div class="col-auto me-auto" id="adtc"><i class="fas fa-user-circle" id="idtc">
+                      </i> </div>
+                      <div class="col-auto p-r-30 p-t-15"><i  class="far fa-eye"></i>2356</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 "style="border: solid 0px;" >
+                  <div class="card">
+                    <div class="row">
+                      <div class="col-md-10"><h6 id="hdtc">Veolia Trade Waste<br>MFSI/Utilities</h6></div>
+                      <div class="col-md-9 ms-auto"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9 ms-md-auto">  </div>
+                      <div class="col-md-9 ms-md-auto">   </div>
+                    </div>
+                    <div class="row" id="rdtc">
+                      <div class="col-auto me-auto" id="adtc"><i class="fas fa-user-circle" id="idtc">
+                      </i> </div>
+                      <div class="col-auto p-r-30 p-t-15"><i  class="far fa-eye"></i>2356</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <br>
+              <br>
+              <div class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+              </div>
+              <h2>Team</h2>
+             
+              <div class="row">
+
+                
+                  <div class="col-lg-12">
+                    <div class="card">
+                      <ul id="box" itemid="bxc">
+                        <div id="boxteam">
+                          <div class="row"> 
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">Mark</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">Priya</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">Mark</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">David</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">Priya</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">Mark</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">Shre</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <i class="fas fa-user-circle" id="iuprofile">
+                              </i>
+                              <p class="f-s-15">David</p>
+                            </div>
+                            <div class="col-lg-1">
+                              <span class="dot" >3+</span>
+                            </div>
+                            
+                          </div>
+                          
+                         
+                        </div>
+                     </ul>
+                    </div>
+
+                  </div>
+                
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-sm-6 col-md-3 col-12 " style="border-left: solid 1px;" id="part2">
+
+            <ul id="box" style="list-style: none;margin-left:-23px;">
+              <h4 class="my-3">List Of Projects</h4>
+              <hr>
+              <li>Orient Electronics</li>
+              <small>MFSI / Retail</small>
+              <hr>
+              <li>Xerox</li>
+              <small>MFSI / Retail</small>
+              <hr>
+              <li>Unilever</li>
+              <small>MFSI / Retail</small>
+              <hr>
+              <li>Pais Cues</li>
+              <small>MFSI / Retail</small>
+              <hr>
+              <li>United Air Lines - Gate Agent Expe</li>
+              <small>MFSI / Aviation</small>
+              <hr>
+              <li>United Air Lines - Attendent Feedb</li>
+              <small>MFSI / Aviation</small>
+              <hr>
+              <li> Bio Tread Ecommerce</li>
+              <small>MFSI / Utilities</small>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <footer class="text-center py-5 mg-2 text-white">
+          <div class="row">
+              <div class="col-lg-6">
+                  <p style="color:dimgray;float:left;">&copy; 2021 |  ALL RIGHTS RESERVED</p>
+              </div>
+              <div class="col-lg-6">
+                  <i class="fab fa-twitter-square mx-1"></i>
+                  <i class="fab fa-google-plus-square mx-1"></i>
+                  <i class="fab fa-facebook-square mx-1"></i>
+              </div>
+          </div>
+      </footer>
+      
+  </div>
+</div>
+</body>
+</html>
