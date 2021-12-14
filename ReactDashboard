@@ -1,0 +1,407 @@
+import React, { Component } from 'react';
+import {Link,NavLink} from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faUserCircle,faPen,faLightbulb, faSignal,faEye} from '@fortawesome/free-solid-svg-icons'
+import Badge from 'react-bootstrap/Badge'
+import "./CSS/style.css"
+class Sidebar extends Component {
+  
+    render() {
+        // var styles={
+        //     minWidth:'250px',
+        //     maxWidth:'250px',
+        //     minHeight:'100vh',
+        //     background:'#fff',
+        //     color:'black',
+        //     transition:'all 0.3s'
+        // }
+        
+        return (<>
+<div className="wrapper" style={{display:"flex",width:"100%",alignItems:"stretch"}}>
+  {/* <!-- Sidebar --> */}
+  <nav id="sidebar" className="" style={{minWidth:"250px",maxWidth:"250px",minHeight:"100vh",marginLeft:"5px"
+,background:"#fff",color:"black",transition:"all 0.3s"}}> 
+      <div className="sidebarHeader" >
+        <div className="col-lg-4 col-sm-6 col-md-3 col-12" > 
+        <FontAwesomeIcon icon={faUserCircle} size="10x" />
+          <FontAwesomeIcon icon={faPen} size="1x" />
+        
+          {/* <i className="fas fa-user-circle" id="user">
+            <sup>
+              <span className="dots" ><i className="fas fa-pen" id="ipen" ></i></span>
+
+            </sup>
+          </i>        */}
+
+
+      </div>
+          <div  className="profilehead">
+            <h6 id="hfor">Forrest Wilson</h6>
+            <small>UX Designer</small>
+          </div>
+      </div>
+
+      <ul className="list-unstyled" >
+          <li className="active" activeClassName="bg-info" style={{marginLeft:"0px"}}>
+              <a href="#homeSubmenu" className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}}>DASHBOARD</a>
+              <ul className="collapse list-unstyled" id="homeSubmenu">
+                  <li>
+                      <a className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}} href="#">Home 1</a>
+                  </li>
+                  <li>
+                      <a className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}} href="#">Home 2</a>
+                  </li>
+                  <li>
+                      <a className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}} href="#">Home 3</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li>
+              <a className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}} href="#">MFSI</a>
+          </li>
+
+          
+          <li>
+              <a className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}} href="#">BFSI</a>
+          </li>
+         
+          <li>
+              <a className='ahover' data-toggle="collapse" aria-expanded="false" style={{padding:"3px"
+            ,fontSize:"1.1em",display:"block"}} href="#">TEAM</a>
+          </li>
+      </ul>
+  </nav>
+  <div id="content" className="container-fluid" style={{backgroundImage:"linear-gradient(-90deg,#a78a69, #a1ad80)"}} >
+        <div className="row ">
+
+          <div className="col-lg-10 col-sm-6 col-md-3 col-12"  id="part2">
+            <div className="container">
+              <h1 className="m-t-25"  style={{marginTop:"25px"}}>DashBoard</h1>
+              <div className="row m-t-35" style={{marginTop:"35px"}}>
+
+                <div className="col-lg-6" id="maindiv" >
+                  <div className="card" id="subdiv" >
+                    <div className="row align-items-center">
+                      <div className="col">
+
+                      </div>
+                      
+                          <small className="badge badge-danger" id="bdgblb" style={{position:"relative",left:"-156px",top:"-20px"}}> 
+                         <FontAwesomeIcon icon={faLightbulb} size='5x'
+                        className="fab fa-adobe text-weight-bold text-danger " />
+                        </small>
+                            
+                           
+                      <div className="col m-t-25"  style={{marginTop:"-55px",marginLeft:"250px"}}>
+                        <h4>MFSI</h4>
+                      </div>
+                      <div className="col m-t-25"  style={{marginTop:"-35px",marginLeft:"100px",paddingBottom:"75px"}}>
+                        <h6>Total Projects</h6>
+                        <big className="f-r m-r-10 f-s-33 m-t--11" style={{float:"right",marginRight:"10px",fontSize:"35px",marginTop:"-11px"}}>34</big>
+                      </div>
+                     </div>
+                  </div>
+
+                </div>
+
+                <div className="col-lg-6" id="maindiv">
+
+                  <div className="card"  id="subdiv">
+                    <div className="row align-items-center">
+                      <div className="col">
+
+                      </div>
+                      <small className="badge badge-primary" id="bdgblb" style={{position:"relative",left:"-156px",top:"-20px"}}> 
+                         <FontAwesomeIcon icon={faSignal} size='5x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                     {/* <sup><small className="badge badge-primary" 
+                      id="bdgblb"><i className="fas fa-signal" id="iblb">
+                      </i></small></sup> */}
+                      <div className="col m-t-25"  style={{marginTop:"-55px",marginLeft:"250px"}}>
+                        <h4>BFSI</h4>
+                      </div>
+
+                      <div className="col m-t-25" style={{marginTop:"-35px",marginLeft:"100px",paddingBottom:"75px"}}>
+                        <h6>Total Projects</h6>
+                        <big className="f-r m-r-10 f-s-33 m-t--11" style={{float:"right",marginRight:"10px",fontSize:"35px",marginTop:"-11px"}}>34</big>
+
+                      </div>
+                     </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <br/>
+              <br/>
+              <h2>Latest Projects</h2>
+
+
+              <div className="row">
+                <div className="col-lg-4 " id="dtcmain" style={{border:"solid 0px",padding:"auto"}}>
+                  <div className="card">
+                    <div className="row">
+                      <div className="col-md-10">
+					            <h6 id="hdtc" style={{padding:"7px",paddingBottom:"75px",fontSize:"15px"}} >DTCC - Code Componets<br/>BFSI/Banking</h6> 
+                      </div>
+                      <div className="col-md-9 ms-auto"></div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3 ms-md-auto">  </div>
+                      <div className="col-md-3 ms-md-auto">   </div>
+                    </div>
+                    <div className="row" id="rdtc" >
+                      <div className="col-auto me-auto"  id="adtc" >
+                      <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x' 
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                          {/* <i className="fas fa-user-circle" id="idtc" >
+                      </i> */}
+                       </div>
+                      <div className="col-auto p-r-30 p-t-15">
+                      <small className="badge badge-primary"  > 
+                         <FontAwesomeIcon icon={faEye} size='0x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                          {/* <i  className="far fa-eye"></i> */}
+                          2356</div>
+                    </div>
+                  </div>
+                 </div>
+
+                 <div className="col-lg-4 "style={{border: "solid 0px"}}>
+                  <div className="card">
+                    <div className="row">
+                      <div className="col-md-10"><h6 id="hdtc" style={{padding:"7px",paddingBottom:"75px",fontSize:"15px"}}>Indus Tower - Employee<br/>MFSI/Telecom</h6></div>
+                      <div className="col-md-9 ms-auto"></div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-9 ms-md-auto">  </div>
+                      <div className="col-md-9 ms-md-auto">   </div>
+                    </div>
+                    <div className="row" id="rdtc">
+                      <div className="col-auto me-auto" id="adtc">
+                      <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                          {/* <i className="fas fa-user-circle" id="idtc">
+                      </i> */}</div> 
+                      <div className="col-auto p-r-30 p-t-15" >
+                      <small className="badge badge-primary"  > 
+                         <FontAwesomeIcon icon={faEye} size='0x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                          {/* <i  className="far fa-eye"></i> */}
+                          2356</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-4 "style={{border: "solid 0px"}} >
+                  <div className="card">
+                    <div className="row">
+                      <div className="col-md-10"><h6 id="hdtc" style={{padding:"7px",paddingBottom:"75px",fontSize:"15px"}}>Veolia Trade Waste<br/>MFSI/Utilities</h6></div>
+                      <div className="col-md-9 ms-auto"></div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-9 ms-md-auto">  </div>
+                      <div className="col-md-9 ms-md-auto">   </div>
+                    </div>
+                    <div className="row" id="rdtc">
+                      <div className="col-auto me-auto" id="adtc">
+                      <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                          {/* <i className="fas fa-user-circle" id="idtc">
+                      </i>  */}
+                      </div>
+                      <div className="col-auto p-r-30 p-t-15">
+                          <small className="badge badge-primary"  > 
+                         <FontAwesomeIcon icon={faEye} size='0x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                          {/* <i  className="far fa-eye"></i> */}
+                          2356</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br/>
+              <br/>
+              <div className="carousel slide">
+                <ol className="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+              </div>
+              <h2>Team</h2>
+
+              <div className="row">
+
+
+                  <div className="col-lg-12">
+                    <div className="card">
+                      <ul id="box" itemid="bxc">
+                        <div id="boxteam">
+                          <div className="row"> 
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>Mark</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>Priya</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>Mark</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>David</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>Priya</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>Mark</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>Shre</p>
+                            </div>
+                            <div className="col-lg-1">
+                            <small className="badge badge-primary" > 
+                         <FontAwesomeIcon icon={faUserCircle} size='2x'
+                        className="fab fa-adobe text-weight-bold text-primary " />
+                        </small>
+                              {/* <i className="fas fa-user-circle" id="iuprofile">
+                              </i> */}
+                              <p className="f-s-15" style={{fontFamily:"sans-serif",fontSize:"1.1rem",fontWeight:"300",
+                            lineHeight1:"1.7em",color:"#999"}}>David</p>
+                            </div>
+                            <div className="col-lg-1">
+                              <span className="dot" >3+</span>
+                            </div>
+
+                          </div>
+
+
+                        </div>
+                     </ul>
+                    </div>
+
+                  </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div className="col-lg-2 col-sm-6 col-md-3 col-12 " style={{borderLeft: "solid 1px"}} id="part2">
+
+            <ul id="box" style={{listStyle: "none",marginLeft:"-23px"}}>
+              <h4 className="my-3">List Of Projects</h4>
+              <hr/>
+              <li>Orient Electronics</li>
+              <small>MFSI / Retail</small>
+              <hr/>
+              <li>Xerox</li>
+              <small>MFSI / Retail</small>
+              <hr/>
+              <li>Unilever</li>
+              <small>MFSI / Retail</small>
+              <hr/>
+              <li>Pais Cues</li>
+              <small>MFSI / Retail</small>
+              <hr/>
+              <li>United Air Lines - Gate Agent Expe</li>
+              <small>MFSI / Aviation</small>
+              <hr/>
+              <li>United Air Lines - Attendent Feedb</li>
+              <small>MFSI / Aviation</small>
+              <hr/>
+              <li> Bio Tread Ecommerce</li>
+              <small>MFSI / Utilities</small>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <footer className="text-center py-5 mg-2 text-white">
+          <div className="row">
+              <div className="col-lg-6">
+                  <p style={{color:"dimgray",float:"left"}}>&copy; 2021 |  ALL RIGHTS RESERVED</p>
+              </div>
+              <div className="col-lg-6">
+                  <i className="fab fa-twitter-square mx-1"></i>
+                  <i className="fab fa-google-plus-square mx-1"></i>
+                  <i className="fab fa-facebook-square mx-1"></i>
+              </div>
+          </div>
+      </footer>
+
+  </div>
+</div>
+</>);
+}
+}
+export default Sidebar;
